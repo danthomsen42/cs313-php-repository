@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="hello.css">
+</head>
+
+<body id="bodyMain">
+
+    <div id="mainMain">
+        
+        
+<!--        <object id="pico8" class="pico8" type="text/html" data="https://danthomsen42.github.io/project-games/green-cube/index.html#zoom=10"></object>-->
+        
+        <object id="pico8" class="pico8" type="text/html" data="https://danthomsen42.github.io/project-games/jude/jude.html">
+        </object>
+        
+        
+    </div>
+    <div class="konami" id="konami">
+        <button id="AButton" value="A" onclick="konamiCode+=this.value; check()">A</button>
+        <button id="BButton" value="B" onclick="konamiCode+=this.value">B</button>
+        <button id="DButtonUp" class="btn DButtonUp" value="Up" onclick="konamiCode+=this.value">▲</button>
+        <button id="DButtonDown" value="Down" onclick="konamiCode+=this.value">▼</button>
+        <button id="DButtonLeft" value="Left" onclick="konamiCode+=this.value">◄</button>
+        <button id="DButtonRight" value="Right" onclick="konamiCode+=this.value">►</button>
+        <button id="start" onclick="check()">Start</button>
+        <button id="select" onclick='konamiCode = "" '>Select</button>
+        <div id=HomeLogo>Daniel's Home Page</div>
+    </div>
+    
+    
+    <p id="toughCookie">This will be my homepage for this class, though I feel I have to add some disclaimers for this site in its current state. <br> <br>
+    First off, the controls on the left side currently don't do anything (or do they?), and the game at the center is no where near completed. I might fix it or update it, but that's fully secondary. <br><br>
+    Secondly, I plan on having links on this side for future games or future sites for this class.
+    <br><br>
+    For now, this will be how it'll look.  <br><br> Below is the current state of my in-development physical arcade machine. This is displayed using html generated in php.
+    
+    </p>
+    
+<!--  https://radiant-gorge-54637.herokuapp.com/home.html  -->
+    <script>
+        var konamiCode = "";
+        console.log("Konami: " + konamiCode)
+        //document.getElementById("konami")
+
+        if (konamiCode == "UpUpDownDownLeftRightLeftRightBA") {
+            
+        }
+
+        function check(){
+            console.log("Konami: " + konamiCode)
+             if (konamiCode == "UpUpDownDownLeftRightLeftRightBA") {
+            console.log("Level Up!!")
+                 alert("Level Up!");
+        }
+        }
+        
+        //Scroll Up
+        //        window.addEventListener('load', function(event){
+        //            console.log("Script finished loading and executing");
+        //        document.querySelector('.DButtonUp').addEventListener('click', function(e) {e.preventDefault();
+        //        document.querySelector('.pico8').scrollBy({top:100, left:0, behavior: 'smooth'});                                                                           
+        //        });
+        //    });
+    </script>
+<?php 
+    echo "<img src='arcadeCabinetRight.jpg' id = 'ArcadeImage'>"
+    
+    ?>
+
+</body>
+
+
+</html>
